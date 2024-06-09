@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/alphatozulu/static/css/main.fbb750fd.css",
+    "main.js": "/alphatozulu/static/js/main.1f9d140b.js",
+    "runtime.js": "/alphatozulu/static/js/runtime.8298897f.js",
+    "static/js/527.6206234c.chunk.js": "/alphatozulu/static/js/527.6206234c.chunk.js",
+    "static/js/153.bdd5e5e9.chunk.js": "/alphatozulu/static/js/153.bdd5e5e9.chunk.js",
+    "static/js/702.5d9bbad8.chunk.js": "/alphatozulu/static/js/702.5d9bbad8.chunk.js",
+    "static/js/558.67352084.chunk.js": "/alphatozulu/static/js/558.67352084.chunk.js",
+    "static/js/745.2d8e38f9.chunk.js": "/alphatozulu/static/js/745.2d8e38f9.chunk.js",
+    "static/js/79.bf38c123.chunk.js": "/alphatozulu/static/js/79.bf38c123.chunk.js",
+    "static/js/184.12296a60.chunk.js": "/alphatozulu/static/js/184.12296a60.chunk.js",
+    "static/js/429.f9442c56.chunk.js": "/alphatozulu/static/js/429.f9442c56.chunk.js",
+    "static/js/878.07074e17.chunk.js": "/alphatozulu/static/js/878.07074e17.chunk.js",
+    "static/js/496.bc5eef7e.chunk.js": "/alphatozulu/static/js/496.bc5eef7e.chunk.js",
+    "static/js/42.f3cb48ef.chunk.js": "/alphatozulu/static/js/42.f3cb48ef.chunk.js",
+    "static/js/653.1ce2f9e8.chunk.js": "/alphatozulu/static/js/653.1ce2f9e8.chunk.js",
+    "static/js/738.67935a3b.chunk.js": "/alphatozulu/static/js/738.67935a3b.chunk.js",
+    "static/js/254.62de220f.chunk.js": "/alphatozulu/static/js/254.62de220f.chunk.js",
+    "static/js/633.84c335b0.chunk.js": "/alphatozulu/static/js/633.84c335b0.chunk.js",
+    "static/js/546.7d9f4be1.chunk.js": "/alphatozulu/static/js/546.7d9f4be1.chunk.js",
+    "static/js/354.390627c8.chunk.js": "/alphatozulu/static/js/354.390627c8.chunk.js",
+    "static/js/339.3e27c183.chunk.js": "/alphatozulu/static/js/339.3e27c183.chunk.js",
+    "static/js/673.99cb99f9.chunk.js": "/alphatozulu/static/js/673.99cb99f9.chunk.js",
+    "static/js/214.3be09e33.chunk.js": "/alphatozulu/static/js/214.3be09e33.chunk.js",
+    "static/js/630.93f2f759.chunk.js": "/alphatozulu/static/js/630.93f2f759.chunk.js",
+    "static/js/47.85bc17f8.chunk.js": "/alphatozulu/static/js/47.85bc17f8.chunk.js",
+    "static/js/302.e18a3cf0.chunk.js": "/alphatozulu/static/js/302.e18a3cf0.chunk.js",
+    "vendor.css": "/alphatozulu/static/css/vendor.0b7531f5.css",
+    "vendor.js": "/alphatozulu/static/js/vendor.c11e9b03.js",
+    "index.html": "/alphatozulu/index.html"
+  },
+  "entrypoints": [
+    "static/js/runtime.8298897f.js",
+    "static/css/vendor.0b7531f5.css",
+    "static/js/vendor.c11e9b03.js",
+    "static/css/main.fbb750fd.css",
+    "static/js/main.1f9d140b.js"
+  ]
+}
