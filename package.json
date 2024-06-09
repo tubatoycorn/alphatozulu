@@ -1,0 +1,52 @@
+{
+  "name": "alphatozulu",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://tubatoycorn.github.io/alphatozulu",
+  "dependencies": {
+    "@craco/craco": "^7.1.0",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "autoprefixer": "^10.4.19",
+    "bootstrap": "^5.3.3",
+    "compression-webpack-plugin": "^11.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "GENERATE_SOURCEMAP=false craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "critters": "^0.0.22",
+    "gh-pages": "^5.0.0"
+  }
+}
