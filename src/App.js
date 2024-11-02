@@ -1,40 +1,32 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AlphabetProvider from "./contexts/AlphabetContext";
 import Home from "./views/Home/Home";
 import "./assets/styles/App.css";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(window.matchMedia("(prefers-color-scheme: dark)").matches);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    setDarkMode(mediaQuery.matches);
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+        const handler = (e) => setDarkMode(e.matches);
 
-    const handleChange = (e) => {
-      setDarkMode(e.matches);
-    };
+        mediaQuery.addEventListener("change", handler);
+        return () => mediaQuery.removeEventListener("change", handler);
+    }, []);
 
-    mediaQuery.addEventListener("change", handleChange);
+    useEffect(() => {
+        document.documentElement.setAttribute("data-bs-theme", darkMode ? "dark" : "light");
+    }, [darkMode]);
 
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    const htmlElement = document.querySelector("html");
-    htmlElement.setAttribute("data-bs-theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
-
-  return (
-    <AlphabetProvider>
-      <div className={`container ${darkMode ? "theme-dark" : "theme-light"}`}>
-        <main>
-          <Home />
-        </main>
-      </div>
-    </AlphabetProvider>
-  );
+    return (
+        <AlphabetProvider>
+            <div className={`container theme-${darkMode ? "dark" : "light"}`}>
+                <main>
+                    <Home />
+                </main>
+            </div>
+        </AlphabetProvider>
+    );
 };
 
 export default App;

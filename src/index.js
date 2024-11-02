@@ -5,13 +5,10 @@ import "./assets/styles/global.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const container = document.getElementById("root");
-const root = createRoot(container);
-
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+createRoot(document.getElementById("root")).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
 );
 
-reportWebVitals();
+reportWebVitals(console.log);
