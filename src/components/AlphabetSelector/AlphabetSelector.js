@@ -1,22 +1,8 @@
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import { AlphabetContext } from "../../contexts/AlphabetContext";
 import { alphabetMap } from "../../services/alphabetService";
 
-const AlphabetSelector = () => {
-  const { alphabet, setAlphabet } = useContext(AlphabetContext);
-
-  const handleChange = (e) => {
-    const selectedValue = e.target.value;
-    const isValid = alphabetMap.some(({ key }) => key === selectedValue);
-
-    if (isValid) {
-      setAlphabet(selectedValue);
-    } else {
-      alert("Invalid selection. Please choose a valid phonetic alphabet.");
-    }
-  };
-
-  const flagMap = {
+const FLAGS = {
     NATO: "🌐",
     ICAO: "🌍",
     FRENCH: "🇫🇷",
@@ -38,36 +24,32 @@ const AlphabetSelector = () => {
     HEBREW: "🇮🇱",
     GREEK: "🇬🇷",
     TURKISH: "🇹🇷",
-  };
+};
 
-  return (
-    <section
-      id="alphabet-selector-section"
-      aria-labelledby="alphabet-selector-label"
-      className="form-group mt-3"
-    >
-      <label
-        id="alphabet-selector-label"
-        htmlFor="alphabet-select"
-        className="form-label"
-      >
-        Select Phonetic Alphabet:
-      </label>
-      <select
-        id="alphabet-select"
-        className="form-select form-control-lg"
-        value={alphabet}
-        onChange={handleChange}
-        aria-describedby="alphabet-selector-label"
-      >
-        {alphabetMap.map(({ key, displayName }) => (
-          <option key={key} value={key}>
-            {`${flagMap[key]} ${displayName}`}
-          </option>
-        ))}
-      </select>
-    </section>
-  );
+const AlphabetSelector = () => {
+    const { alphabet, setAlphabet } = useContext(AlphabetContext);
+
+    const options = useMemo(
+        () =>
+            alphabetMap.map(({ key, displayName }) => ({
+                value: key,
+                label: `${FLAGS[key]} ${displayName}`,
+            })),
+        []
+    );
+
+    return (
+        <section className="form-group mt-3">
+            <label htmlFor="alphabet-select" className="form-label">Select Phonetic Alphabet:</label>
+            <select id="alphabet-select" className="form-select form-control-lg" value={alphabet} onChange={(e) => setAlphabet(e.target.value)}>
+                {options.map(({ value, label }) => (
+                    <option key={value} value={value}>
+                        {label}
+                    </option>
+                ))}
+            </select>
+        </section>
+    );
 };
 
 export default AlphabetSelector;
