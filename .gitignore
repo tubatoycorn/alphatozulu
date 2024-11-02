@@ -1,44 +1,42 @@
-/node_modules
-/.pnp
+# Dependencies
+node_modules/
+.pnp
 .pnp.js
+.npm
 
-/coverage
+# Testing
+coverage/
 
-/build
+# Production
+build/
+dist/
 
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+# Environment Variables
 .env
-.env.*.local
+.env.*
+!.env.example
 
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# IDE
 .idea/
 .vscode/
 *.sublime-workspace
 
-.npm
+# Cache
+.cache/
+.next/
+.svelte-kit/
 
-/.cache
+# OS
+.DS_Store
+Thumbs.db
 
-/.next
-
-/.svelte-kit
-
-.storybook/
-
+# Misc
 *.tsbuildinfo
-
-*.DS_Store
-
-*.log
-
 *.tmp
 *.temp
-
-dist/
